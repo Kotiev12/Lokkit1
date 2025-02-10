@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProfileComponent } from './shared/components/profile/profile.component'
+import { PostComponent } from './shared/components/post/post.component'
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent],
+  imports: [RouterOutlet, ProfileComponent, PostComponent],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
