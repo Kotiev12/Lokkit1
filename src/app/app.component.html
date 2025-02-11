@@ -2,3 +2,8 @@
 <app-profile/>
 <app-post/>
 <app-card/>
+
+  <div>
+    <h2>Активный пользователь: {{ (userService.activeUser$ | async)?.name }}</h2>
+    <button (click)="switchUser()">Сменить пользователя</button>
+  </div>
