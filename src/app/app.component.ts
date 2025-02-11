@@ -3,8 +3,9 @@ import { RouterOutlet } from '@angular/router';
 import { ProfileComponent } from './shared/components/profile/profile.component'
 import { PostComponent } from './shared/components/post/post.component'
 import { CardComponent } from './shared/components/card/card.component'
-import { UserService } from './core/services/user.service'
+import { User, UserService } from './core/services/user.service'
 import { CommonModule } from '@angular/common';
+import { Post, PostService } from './core/services/post.service';
 
 
 
@@ -17,15 +18,39 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  
   title = 'Lokkit';
   activeUser: any;
 
-  constructor(public userService: UserService) {}
+
+  users: User[] = [];
+
+  posts: Post[] = [];
+
+  constructor(private postService: PostService, public userService: UserService) {
+    this.getPosts();
+  }
+
+  // Загружаем посты при инициализации
+  getPosts() {
+    this.posts = this.postService.getPosts();
+  }
+
+  // Метод для лайка
+  likePost(postId: number) {
+    this.postService.likePost(postId);
+  }
+
+  // Метод для переключения комментариев
+  toggleComments(postId: number) {
+    this.postService.toggleComments(postId);
+  }  
 
   ngOnInit(): void {
     const users = this.userService.getAllUsers();
     console.log(users);
   }
+  
 
   switchUser() {
     this.userService.switchUser();
