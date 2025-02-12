@@ -16,7 +16,7 @@ export interface Post {
 })
 export class PostService {
 
-  posts: Post[] = [
+  public posts: Post[] = [
     {
       id: 1,
       authorId: 1,

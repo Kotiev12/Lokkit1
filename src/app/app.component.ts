@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ProfileComponent } from './shared/components/profile/profile.component'
+import { ProfileComponent } from './features/feature1/pages/profile/profile.component'
 import { PostComponent } from './shared/components/post/post.component'
 import { CardComponent } from './shared/components/card/card.component'
 import { User, UserService } from './core/services/user.service'
 import { CommonModule } from '@angular/common';
-import { Post, PostService } from './core/services/post.service';
+import { PostService } from './core/services/post.service';
 
 
 
@@ -23,25 +23,18 @@ export class AppComponent {
   activeUser: any;
 
 
-  users: User[] = [];
+  constructor( public userService: UserService, public postService: PostService ) {
 
-  posts: Post[] = [];
-
-  constructor(private postService: PostService, public userService: UserService) {
-    this.getPosts();
   }
 
-  // Загружаем посты при инициализации
   getPosts() {
-    this.posts = this.postService.getPosts();
+    this.postService.getPosts();
   }
 
-  // Метод для лайка
   likePost(postId: number) {
     this.postService.likePost(postId);
   }
 
-  // Метод для переключения комментариев
   toggleComments(postId: number) {
     this.postService.toggleComments(postId);
   }  
@@ -52,7 +45,7 @@ export class AppComponent {
   }
   
 
-  switchUser() {
-    this.userService.switchUser();
+  switchUser(id: number) {
+    this.userService.switchUser(id);
   }
 }

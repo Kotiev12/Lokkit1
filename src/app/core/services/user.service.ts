@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 
 export interface User {
   id: number;
@@ -16,7 +15,7 @@ export interface User {
 })
 export class UserService {
 
-  users: User[] = [
+  public users: User[] = [
     {
       id: 1,
       name: "Suleim Kotiev",
@@ -60,17 +59,15 @@ export class UserService {
   };
 
 
-  private activeUserSubject = new BehaviorSubject(this.users[0]);
-  activeUser$ = this.activeUserSubject.asObservable(); 
+  public activeUser = this.users[0]
+  
 
-  getActiveUser(): User {
-    return this.activeUserSubject.value;
-  }
-
-  switchUser() {
-    const currentIndex = this.users.indexOf(this.activeUserSubject.value);
-    const nextIndex = (currentIndex + 1) % this.users.length;
-    this.activeUserSubject.next(this.users[nextIndex]); 
+  switchUser(id: number) {
+    const user: User | undefined = this.getUserById(id);
+    console.log(user);
+    if (user) {
+      this.activeUser = user;
+    }
   }
 }
 
