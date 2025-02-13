@@ -1,0 +1,51 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { ProfileComponent } from './features/feature1/pages/profile/profile.component'
+import { PostComponent } from './shared/components/post/post.component'
+import { CardComponent } from './shared/components/card/card.component'
+import { User, UserService } from './core/services/user.service'
+import { CommonModule } from '@angular/common';
+import { PostService } from './core/services/post.service';
+
+
+
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule],
+  templateUrl: 'app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {
+  
+  title = 'Lokkit';
+  activeUser: any;
+
+
+  constructor( public userService: UserService, public postService: PostService ) {
+
+  }
+
+  getPosts() {
+    this.postService.getPosts();
+  }
+
+  likePost(postId: number) {
+    this.postService.likePost(postId);
+  }
+
+  toggleComments(postId: number) {
+    this.postService.toggleComments(postId);
+  }  
+
+  ngOnInit(): void {
+    const users = this.userService.getAllUsers();
+    console.log(users);
+  }
+  
+
+  switchUser(id: number) {
+    this.userService.switchUser(id);
+  }
+}
