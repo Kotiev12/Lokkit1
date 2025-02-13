@@ -4,6 +4,7 @@ import { ProfileSettingsComponent } from './features/feature1/pages/profile/prof
 import { ProfileInfoComponent } from './features/feature1/pages/profile/profile-info/profile-info.component'
 import { ProfileComponent } from './features/feature1/pages/profile/profile.component'
 import { PostComponent } from './shared/components/post/post.component'
+import { NavbarComponent } from './shared/components/navbar/navbar.component'
 import { CardComponent } from './shared/components/card/card.component'
 import { User, UserService } from './core/services/user.service'
 import { CommonModule } from '@angular/common';
@@ -15,7 +16,7 @@ import { PostService } from './core/services/post.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule, ProfileSettingsComponent, ProfileInfoComponent],
+  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule, ProfileSettingsComponent, ProfileInfoComponent, NavbarComponent],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
