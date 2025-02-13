@@ -1,0 +1,46 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 20px;
+  border-bottom: 1px solid rgba(226, 232, 240, 1);
+  input{
+    height: 29px;
+    width: 450px;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(203, 213, 225, 1);
+    border-radius: 123px;
+    }
+    ::placeholder{
+      color: rgba(71, 85, 105, 1);
+    }
+}
+
+.navbar-menu{
+  display: flex;
+  gap: 15px;
+}
+
+.menu-btn{
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-search{
+  position: relative;
+  img{
+    position: absolute;
+    left: 440px;
+    top: 18px;
+  }
+}
