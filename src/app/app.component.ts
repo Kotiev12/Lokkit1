@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ProfileSettingsComponent } from './features/feature1/pages/profile/profile-settings/profile-settings.component'
 import { ProfileComponent } from './features/feature1/pages/profile/profile.component'
 import { PostComponent } from './shared/components/post/post.component'
 import { CardComponent } from './shared/components/card/card.component'
@@ -13,7 +14,7 @@ import { PostService } from './core/services/post.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule],
+  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule, ProfileSettingsComponent ],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
