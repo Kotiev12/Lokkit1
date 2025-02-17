@@ -2,7 +2,6 @@
   padding: 0px;
   margin: 0px;
   font-family: "Plus Jakarta Sans", serif;
-  background-color: rgba(226, 232, 240, 1);
 }
 
 .container {
@@ -56,21 +55,17 @@
 .user-logo {
   display: flex;
   gap: 24px;
-  background-color: rgba(255, 255, 255, 1);
   padding-left: 2px;
   img{
-    background-color: rgba(255, 255, 255, 1);
   }
 }
 
 .user-name {
-  background-color: rgba(255, 255, 255, 1);
   span {
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
     color: rgba(71, 85, 105, 1);
-    background-color: rgba(255, 255, 255, 1);
   }
 
   p{
@@ -78,14 +73,12 @@
     font-size: 14px;
     line-height: 22.4px;
     color: rgba(71, 85, 105, 1);
-    background-color: rgba(255, 255, 255, 1);
   }
 
 }
 
 .follow-btn{
   padding-right: 8px;
-  background-color: rgba(255, 255, 255, 1);
   button{
     padding: 12px 22px;
     border: 1px solid rgba(79, 70, 229, 1);
@@ -99,7 +92,6 @@
 
 .unfollow-btn{
   padding-right: 8px;
-  background-color: rgba(255, 255, 255, 1);
   button{
     padding: 12px 22px;
     border: 1px solid rgba(236, 236, 236, 1);
