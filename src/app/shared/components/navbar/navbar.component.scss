@@ -8,11 +8,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 20px;
-  border-bottom: 1px solid rgba(226, 232, 240, 1);
+  padding: 20px 32px;
+  border-bottom: 1px solid rgb(195, 200, 207);
   input{
-    height: 29px;
-    width: 450px;
+    width: 400px;
     padding: 12px;
     font-weight: 500;
     font-size: 16px;
@@ -27,8 +26,16 @@
 }
 
 .navbar-menu{
+  max-width: 427px;
   display: flex;
   gap: 15px;
+  button{
+    padding: 12px 20px;
+    border: 1px solid rgba(79, 70, 229, 1);
+    border-radius: 1234px;
+    background-color: rgba(79, 70, 229, 1);
+    color: #fff;
+  }
 }
 
 .menu-btn{
@@ -40,7 +47,7 @@
   position: relative;
   img{
     position: absolute;
-    left: 440px;
-    top: 18px;
+    left: 390px;
+    top: 15px;
   }
 }

@@ -9,6 +9,7 @@ import { CardComponent } from './shared/components/card/card.component'
 import { User, UserService } from './core/services/user.service'
 import { CommonModule } from '@angular/common';
 import { PostService } from './core/services/post.service';
+import { UsersComponent } from "./features/feature1/pages/users/users.component";
 
 
 
@@ -16,7 +17,7 @@ import { PostService } from './core/services/post.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule, ProfileSettingsComponent, ProfileInfoComponent, NavbarComponent],
+  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule, ProfileSettingsComponent, ProfileInfoComponent, NavbarComponent, UsersComponent],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
