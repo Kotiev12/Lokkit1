@@ -1,7 +1,7 @@
 
-<!-- <div *ngIf="posts.length > 0; else noPosts">
+<div *ngIf="posts.length > 0; else noPosts">
   <app-post *ngFor="let post of posts" [post]="post"></app-post>
-</div> -->
+</div>
 
 <ng-container *ngFor="let post of posts">
   <app-post *appShowIfLiked="post.likes" [post]="post"></app-post>
