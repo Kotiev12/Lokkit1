@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 import { PostService } from './core/services/post.service';
 import { UsersComponent } from "./features/feature1/pages/users/users.component";
 import { HighlightDirective } from "./shared/directives/highlight.directive";
+import { FeedComponent } from "./features/feature1/pages/feed/feed.component";
+
 
 
 
@@ -18,7 +20,7 @@ import { HighlightDirective } from "./shared/directives/highlight.directive";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule, ProfileSettingsComponent, ProfileInfoComponent, NavbarComponent, UsersComponent, HighlightDirective],
+  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule, ProfileSettingsComponent, ProfileInfoComponent, NavbarComponent, UsersComponent, HighlightDirective, FeedComponent],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
