@@ -6,10 +6,11 @@ import { ShowIfLikedDirective } from '../../../../shared/directives/app-show-if-
 
 
 
+
 @Component({
   selector: 'app-feed',
   standalone: true,
-  imports: [PostComponent,CommonModule, ShowIfLikedDirective],
+  imports: [PostComponent, CommonModule, ShowIfLikedDirective],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.scss'
 })

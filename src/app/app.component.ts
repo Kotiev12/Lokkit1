@@ -17,10 +17,11 @@ import { FeedComponent } from "./features/feature1/pages/feed/feed.component";
 
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule, ProfileSettingsComponent, ProfileInfoComponent, NavbarComponent, UsersComponent, HighlightDirective, FeedComponent],
+  imports: [CommonModule, FeedComponent],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
