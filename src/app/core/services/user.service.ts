@@ -37,7 +37,6 @@ export class UserService {
   ];
 
   getAllUsers() : User[] {
-    console.log('UserService: Возвращаем список пользователей');
     return [...this.users]
   };
 
@@ -64,7 +63,6 @@ export class UserService {
 
   switchUser(id: number) {
     const user: User | undefined = this.getUserById(id);
-    console.log(user);
     if (user) {
       this.activeUser = user;
     }
