@@ -1,1 +1,6 @@
-<p>card works!</p>
+<div class="user-list">
+  <h2>Список пользователей</h2>
+    <p *ngFor="let user of users">
+      {{ user | userName }}
+    </p>
+</div>
