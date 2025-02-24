@@ -22,6 +22,8 @@ import { FeedComponent } from "./features/feature1/pages/feed/feed.component";
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, FeedComponent, UsersComponent, ProfileComponent,CardComponent],
+=======
+  imports: [CommonModule, FeedComponent, NavbarComponent, CardComponent],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
