@@ -6,10 +6,11 @@ import { ShowIfLikedDirective } from '../../../../shared/directives/app-show-if-
 
 
 
+
 @Component({
   selector: 'app-feed',
   standalone: true,
-  imports: [PostComponent,CommonModule, ShowIfLikedDirective],
+  imports: [PostComponent, CommonModule, ShowIfLikedDirective],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.scss'
 })
@@ -24,4 +25,7 @@ export class FeedComponent implements OnInit {
   hasLikedPosts(): boolean {
     return this.posts.some(post => post.likes > 0);
   }
+=======
+export class FeedComponent {
+  constructor(public postService: PostService) {}
 }

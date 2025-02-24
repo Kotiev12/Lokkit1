@@ -17,10 +17,13 @@ import { FeedComponent } from "./features/feature1/pages/feed/feed.component";
 
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProfileComponent, PostComponent, CardComponent, CommonModule, ProfileSettingsComponent, ProfileInfoComponent, NavbarComponent, UsersComponent, HighlightDirective, FeedComponent],
+  imports: [CommonModule, FeedComponent, UsersComponent, ProfileComponent,CardComponent],
+=======
+  imports: [CommonModule, FeedComponent, NavbarComponent, CardComponent],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -46,11 +49,6 @@ export class AppComponent {
     this.postService.toggleComments(postId);
   }  
 
-  ngOnInit(): void {
-    const users = this.userService.getAllUsers();
-    console.log(users);
-  }
-  
 
   switchUser(id: number) {
     this.userService.switchUser(id);

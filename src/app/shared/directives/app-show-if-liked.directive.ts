@@ -8,10 +8,9 @@ export class ShowIfLikedDirective {
   private viewContainer = inject(ViewContainerRef); 
 
   @Input() set appShowIfLiked(likes: number) {
+    this.viewContainer.clear();
     if (likes > 0) {
       this.viewContainer.createEmbeddedView(this.templateRef);
-    } else {
-      this.viewContainer.clear();
     }
   }
 }

@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 
 export interface User {
   id: number;
-  name: string;
+  firstName: string;
+  lastName: string;
   username: string;
   email: string;
   avatar: string;
@@ -18,8 +19,9 @@ export class UserService {
   public users: User[] = [
     {
       id: 1,
-      name: "Suleim Kotiev",
-      username: "string",
+      firstName: "Suleim",
+      lastName: "Kotiev",
+      username: "kotiev_s",
       email: "suleim.kotiev@example.com",
       avatar: "string",
       gender: "male",
@@ -27,8 +29,9 @@ export class UserService {
     },
     {
       id: 2,
-      name: "Mark King",
-      username: "string",
+      firstName: "Mark",
+      lastName: "King",
+      username: "mark_king",
       email: "mark.king@example.com",
       avatar: "string",
       gender: "male",
@@ -37,7 +40,6 @@ export class UserService {
   ];
 
   getAllUsers() : User[] {
-    console.log('UserService: Возвращаем список пользователей');
     return [...this.users]
   };
 
@@ -64,7 +66,6 @@ export class UserService {
 
   switchUser(id: number) {
     const user: User | undefined = this.getUserById(id);
-    console.log(user);
     if (user) {
       this.activeUser = user;
     }
