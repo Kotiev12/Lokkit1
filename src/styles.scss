@@ -11,3 +11,9 @@
 body {
   background-color: var(--background);
 }
+
+.container{
+  margin: 0 auto;
+  max-width: 1400px;
+  min-height: 100vh;
+}

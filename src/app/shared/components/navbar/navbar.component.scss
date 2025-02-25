@@ -1,0 +1,53 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  border-bottom: 1px solid rgb(195, 200, 207);
+  input{
+    width: 400px;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(203, 213, 225, 1);
+    border-radius: 123px;
+    }
+    ::placeholder{
+      color: rgba(71, 85, 105, 1);
+    }
+}
+
+.navbar-menu{
+  max-width: 427px;
+  display: flex;
+  gap: 15px;
+  button{
+    padding: 12px 20px;
+    border: 1px solid rgba(79, 70, 229, 1);
+    border-radius: 1234px;
+    background-color: rgba(79, 70, 229, 1);
+    color: #fff;
+  }
+}
+
+.menu-btn{
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-search{
+  position: relative;
+  img{
+    position: absolute;
+    left: 390px;
+    top: 15px;
+  }
+}
