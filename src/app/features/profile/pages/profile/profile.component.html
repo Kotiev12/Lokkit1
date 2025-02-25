@@ -1,6 +1,53 @@
-<div>
-  <img class="avatar" [src]="userService.activeUser.avatar" alt="">
-  <p>{{userService.activeUser.username}}</p>
-  <p>{{userService.activeUser.firstName}}</p>
-  <p>{{userService.activeUser.lastName}}</p>
+
+<app-navbar/>
+<div class="container">
+  <h3>Profile</h3>
+  <div class="profile-pages">
+    <div class="info">
+      <img src="../../../../../../assets/icons/User-Circle-2.png" alt="" />
+      <p>Info</p>
+    </div>
+    <div class="settings">
+      <img src="../../../../../../assets/icons/Monotone add.png" alt="" />
+      <p>Settings</p>
+    </div>
+    <div class="devices">
+      <img src="../../../../../../assets/icons/Fingerprint.png" alt="" />
+      <p>Devices</p>
+    </div>
+  </div>
+  <div class="profile-info">
+    <img src="../../../../../../assets/icons/Avatar (3).png" alt="">
+    <button class="change-photo">Change photo</button>
+    <button class="delete">Delete</button>
+  </div>
+  <div class="main">
+    <div class="main-info">
+      <h4>Info</h4>
+      <div class="info-name">
+        <div class="grey">
+          <input class="grey" type="text" placeholder="Last Name">
+        </div>
+        <input type="text" placeholder="FullName">
+      </div>
+      <div class="greyy">
+        <input class="greyy" type="text" placeholder="City">
+      </div>
+      <input type="text" placeholder="Story">
+      <div class="Save">
+        <button>Save</button>
+      </div>
+    </div>
+    <div class="main-password">
+      <h4>Password</h4>
+      <div class="info-password">
+        <input type="text" placeholder="Old Password">
+        <input type="text" placeholder="Old Password">
+        <input type="text" placeholder="Old Password">
+      </div>
+      <div class="Save">
+        <button>Save</button>
+      </div>
+    </div>
+  </div>
 </div>
