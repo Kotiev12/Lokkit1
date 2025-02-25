@@ -1,1 +1,6 @@
-<p>profile works!</p>
+<div>
+  <img class="avatar" [src]="userService.activeUser.avatar" alt="">
+  <p>{{userService.activeUser.username}}</p>
+  <p>{{userService.activeUser.firstName}}</p>
+  <p>{{userService.activeUser.lastName}}</p>
+</div>

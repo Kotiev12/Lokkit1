@@ -9,6 +9,7 @@ export interface Post {
   comments: string[];
   tags: string[];
   showComments: boolean;
+  image: string;
 }
 
 @Injectable({
@@ -25,7 +26,8 @@ export class PostService {
       likes: 2,
       comments: ['интересно', 'спасибо за информацию'],
       tags: ['земля', 'природа', 'мир'],
-      showComments: false
+      showComments: false,
+      image: "https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 2,
@@ -35,8 +37,8 @@ export class PostService {
       likes: 0,
       comments: ['интересно', 'спасибо за информацию'],
       tags: ['земля', 'природа', 'мир'],
-      showComments: false
-
+      showComments: false,
+      image: "https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 3,
@@ -46,7 +48,8 @@ export class PostService {
       likes: 10,
       comments: ['интересно', 'спасибо за информацию'],
       tags: ['земля', 'природа', 'мир'],
-      showComments: false
+      showComments: false,
+      image: "https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 

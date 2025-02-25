@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UserService } from '../../../../core/services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
-
+  userService = inject(UserService)
 }

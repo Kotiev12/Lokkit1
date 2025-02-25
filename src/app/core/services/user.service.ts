@@ -23,7 +23,7 @@ export class UserService {
       lastName: "Kotiev",
       username: "kotiev_s",
       email: "suleim.kotiev@example.com",
-      avatar: "string",
+      avatar: "https://api.dicebear.com/9.x/adventurer/svg?seed=Mackenzie",
       gender: "male",
       role: 'admin',
     },
