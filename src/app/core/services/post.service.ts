@@ -57,6 +57,10 @@ export class PostService {
       return this.posts
     };
 
+      getPostById(id: number): Post | undefined {
+        return this.posts.find(post => post.id === id);
+      };
+
     likePost(postId: number): void {
       const post = this.posts.find(p => p.id === postId);
       if (post) {
