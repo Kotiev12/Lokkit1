@@ -4,7 +4,7 @@ import { NavbarComponent } from "../../../../shared/components/navbar/navbar.com
 
 @Component({
   selector: 'app-profile',
-  imports: [NavbarComponent],
+  imports: [],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss'
 })

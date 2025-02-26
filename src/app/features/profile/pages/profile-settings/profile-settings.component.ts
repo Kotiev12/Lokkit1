@@ -3,10 +3,10 @@ import { NavbarComponent } from "../../../../shared/components/navbar/navbar.com
 
 @Component({
   selector: 'app-profile-settings',
-  imports: [NavbarComponent],
+  imports: [],
   templateUrl: './profile-settings.component.html',
-  styleUrl: './profile-info.component.scss'
+  styleUrl: './profile-settings.component.scss'
 })
-export class ProfileInfoComponent {
+export class ProfileSettingsComponent {
 
 }
