@@ -5,7 +5,7 @@ import { NavbarComponent } from "../../../../shared/components/navbar/navbar.com
   selector: 'app-profile-settings',
   imports: [NavbarComponent],
   templateUrl: './profile-settings.component.html',
-  styleUrl: './profile-settings.component.scss'
+  styleUrl: './profile-info.component.scss'
 })
 export class ProfileInfoComponent {
 
