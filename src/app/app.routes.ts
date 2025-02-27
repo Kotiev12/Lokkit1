@@ -9,5 +9,6 @@ export const routes: Routes = [
   {path: '', redirectTo: 'feed', pathMatch: 'full'},
   {path: 'users', component: UserComponent},
   {path: 'profile', component: ProfileComponent},
+  {path: 'post', loadChildren: () => import('./features/post/pages/post.routes').then(p => p.postRoutes)},
   {path: '**', component: NotFoundComponent}
 ];
