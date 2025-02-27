@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Post, PostService } from '../../../../core/services/post.service';
 
 @Component({
   selector: 'app-post-details',
@@ -8,5 +9,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './post-details.component.scss'
 })
 export class PostDetailsComponent {
-  
+  route = inject(ActivatedRoute)
+  postService = inject(PostService)
+  id: string | null = null 
+  post!: Post | undefined
+  ngOnInit() {
+    this.id = this.route.snapshot.paramMap.get('id')
+
+    this.post = this.postService.getPostById(Number(this.id))
+    console.log(this.post);
+  }
 }
