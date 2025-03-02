@@ -1,12 +1,10 @@
-import { Component, Input } from '@angular/core';
-import { User, UserService } from '../../../../core/services/user.service';
-import { UserrComponent } from '../../../../shared/components/user/user.component';
+import { Component } from '@angular/core';
+import { UserService } from '../../../../core/services/user.service';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from '../../../../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-user',
-  imports: [CommonModule, UserrComponent, NavbarComponent],
+  imports: [CommonModule],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
