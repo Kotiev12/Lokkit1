@@ -1,17 +1,19 @@
-<div class="container">
+<div class="container1">
   <h3>Profile</h3>
   <div class="profile-pages">
-    <div class="info">
+    <div routerLink="info" class="info">
       <img src="../../../../../../assets/icons/User-Circle-2.png" alt="" />
       <p>Info</p>
     </div>
-    <div class="settings">
+    <div routerLink="settings" class="settings">
       <img src="../../../../../../assets/icons/Monotone add.png" alt="" />
       <p>Settings</p>
     </div>
-    <div class="devices">
+    <div routerLink="devices" class="devices">
       <img src="../../../../../../assets/icons/Fingerprint.png" alt="" />
-      <p>Devices</p>
+      <p >Devices</p>
     </div>
   </div>
+  <router-outlet/>
 </div>
+ 

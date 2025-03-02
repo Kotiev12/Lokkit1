@@ -3,16 +3,39 @@
 </style>
 <div class="navbar">
   <div class="navbar-search">
+
     <input type="text" placeholder="Search for friends, groups, pages" />
-    <img style="width: 20px; height: 20px;" src="../../../../assets/icons/Icon.png" alt="" />
+    <img
+      style="width: 20px; height: 20px"
+      src="../../../../assets/icons/Icon.png"
+      alt=""
+    />
+
   </div>
   <div class="navbar-menu">
     <button>Add New Post +</button>
-    <img style="width: 48px; height: 48px;" src="../../../../assets/icons/Button Icon (3).png" alt="" />
-    <img style="width: 48px; height: 48px;" src="../../../../assets/icons/Button Icon (4).png" alt="" />
-    <img style="width: 48px; height: 48px;" src="../../../../assets/icons/Button Icon (5).png" alt="" />
+    <img
+      style="width: 48px; height: 48px"
+      src="../../../../assets/icons/Button Icon (3).png"
+      alt=""
+    />
+    <img
+      style="width: 48px; height: 48px"
+      src="../../../../assets/icons/Button Icon (4).png"
+      alt=""
+    />
+    <img
+      style="width: 48px; height: 48px"
+      src="../../../../assets/icons/Button Icon (5).png"
+      alt=""
+    />
     <div class="menu-logo">
-      <img style="width: 48px; height: 48px;" src="../../../../assets/icons/Avatar (4).png" alt="" />
+      <img
+        [routerLink]="['/profile', userService.activeUser.id]"
+        style="width: 48px; height: 48px"
+        src="../../../../assets/icons/Avatar (4).png"
+        alt=""
+      />
     </div>
   </div>
 </div>
