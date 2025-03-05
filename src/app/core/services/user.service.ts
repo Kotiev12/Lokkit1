@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 
 export interface User {
   id: number;
-  firstName: string;
-  lastName: string;
+  firstName?: string;
+  lastName?: string;
   username: string;
   email: string;
-  avatar: string;
-  gender: 'male' | 'female';
+  avatar?: string;
+  gender?: 'male' | 'female';
   role: 'admin' | 'user';
 }
 
