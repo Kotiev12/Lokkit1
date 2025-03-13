@@ -93,3 +93,17 @@ button {
     height: 40px;
   }
 }
+
+input.ng-valid.ng-touched {
+  border-bottom: 2px solid green;
+}
+input.ng-invalid.ng-touched {
+  border-bottom: 2px solid red;
+}
+
+.form-err{
+  span{
+    font-size: 9px;
+    font-weight: normal;
+  }
+}

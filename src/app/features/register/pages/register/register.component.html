@@ -1,0 +1,73 @@
+
+<form [formGroup]="registerForm" class="register">
+  <div class="logo">
+    <img src="../../../assets/icons/Frame 3.svg" alt="">
+  </div>
+  <div class="block">
+    <div class="input">
+      <img src="../../../assets/icons/Email.svg" alt="">
+      <input formControlName="email" minlength="3" type="text" placeholder="Email">
+      <div class="form-err" *ngIf="registerForm.controls.email?.touched && registerForm.controls.email?.invalid">
+        <span *ngIf="registerForm.controls.email?.errors?.['required']">
+          Обязательное поле
+        </span>
+        <span *ngIf="registerForm.controls.email?.errors?.['email']">
+          Введите Email
+        </span>
+      </div>
+    </div>
+    <div class="input">
+      <img src="../../../assets/icons/User-Circle-2.svg" alt="">
+      <input formControlName="username" type="text" placeholder="Username">
+      <div class="form-err" *ngIf="registerForm.controls.username?.touched && registerForm.controls.username?.invalid">
+        <span *ngIf="registerForm.controls.username?.errors?.['required']">
+          Обязательное поле
+        </span>
+        <span *ngIf="registerForm.controls.username?.errors?.['minlength']">
+          Минимум 3 символа
+        </span>
+      </div>
+    </div>
+    <div class="input">
+      <img src="../../../assets/icons/Unlock.svg" alt="">
+      <input formControlName="password" type="text" placeholder="Password">
+      <div class="form-err" *ngIf="registerForm.controls.password?.touched && registerForm.controls.password?.invalid">
+        <span *ngIf="registerForm.controls.password?.errors?.['minlength']">
+          Минимум 3 символа
+        </span>
+        <span *ngIf="registerForm.controls.password?.errors?.['required']">
+          Обязательное поле 
+        </span>
+      </div>
+    </div>
+    <div class="input">
+      <img src="../../../assets/icons/Unlock.svg" alt="">
+      <input formControlName="confirmPassword" type="text" placeholder="Confirm Password">
+      @if (registerForm.errors?.['notMatch'] && registerForm.controls['confirmPassword'].touched) {
+        @if (registerForm.get(['confirmPassword'])?.errors?.['required']) {
+        }
+        @if (registerForm.get(['confirmPassword'])?.errors?.['minlength']) {
+        }
+        @if (registerForm.errors?.['notMatch']) {
+          <div class="form-err">
+            <span> Пароль не совпадает </span>
+          </div>
+        }
+    }
+    </div>
+    <div class="register-foot">
+      <button>Register</button>
+      <div class="login">
+        <p>Do you have an account?</p>
+        <span>Log In</span>
+      </div>
+    </div>
+    <div class="links-block">
+      <div class="links">
+          <img src="../../../assets/icons/Google Plus.png" alt="">
+          <img src="../../../assets/icons/VK.png" alt="">
+          <img src="../../../assets/icons/Youtube.png" alt="">
+      </div>
+    </div>
+  </div>
+</form>
