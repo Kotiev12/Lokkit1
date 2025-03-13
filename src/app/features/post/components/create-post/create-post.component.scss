@@ -80,3 +80,13 @@ button{
   flex-direction: column;
   align-items: center;
 }
+
+.teg{
+  display: flex;
+  gap: 5px;
+  margin-top: 7px;
+  input{
+    width: 100px;
+    height: 20px;
+  }
+}
