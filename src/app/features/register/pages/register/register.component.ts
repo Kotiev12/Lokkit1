@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { passwordValidator } from '../../../passwordValidator';
+import { AuthService } from '../../../../core/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -11,6 +12,14 @@ import { passwordValidator } from '../../../passwordValidator';
 })
 export class RegisterComponent {
 
+  authServuce = inject(AuthService)
+
+  register() {
+    if(this.registerForm.valid){
+      this.authServuce.register(this.registerForm.value)
+    }
+      
+  }
 
   registerForm = new FormGroup ({
     username: new FormControl('', [Validators.required, Validators.minLength(3)]),
