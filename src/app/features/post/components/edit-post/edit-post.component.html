@@ -1,0 +1,43 @@
+<div class="create-post">
+  <h1>Edit Post</h1>
+  <form [formGroup]="editPostForm" class="form" class="form">
+    <label class="file">
+      <input class="img" type="file" />
+      <span>+</span>
+    </label>
+    <input formControlName="title" type="text" placeholder="Title" />
+    @if(editPostForm.controls.title.touched &&
+    editPostForm.controls.title.invalid){
+    <span *ngIf="editPostForm.controls.title?.errors?.['required']">
+      обязательное поле
+    </span>
+    <span *ngIf="editPostForm.controls.title?.errors?.['minlength']">
+      минимальное число символов 3
+    </span>
+    }
+    <input formControlName="content" type="text" placeholder="Content" />
+    @if(editPostForm.controls.content.touched &&
+    editPostForm.controls.content.invalid){
+    <span *ngIf="editPostForm.controls.content?.errors?.['required']">
+      Обязательное поле
+    </span>
+    <span *ngIf="editPostForm.controls.content?.errors?.['maxlength']">
+      максимальное число символов 150
+    </span>
+    }
+    <div formArrayName="tags" class="tegs">
+      @for(teg of tags.controls; track $index){
+      <label class="teg" for="">
+        <input [formControlName]="$index" type="text" name="" id="" />
+        <p (click)="closeTag()">x</p>
+      </label>
+      }
+    </div>
+    <div>
+      <div class="foot-btn">
+        <button class="tag" (click)="addTeg()">Добавить тег</button>
+        <button class="create" (click)="editPost()">Edit Post</button>
+      </div>
+    </div>
+  </form>
+</div>

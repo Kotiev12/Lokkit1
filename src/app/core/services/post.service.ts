@@ -78,4 +78,8 @@ export class PostService {
     createPost(data: any) {
       console.log(data);
     }
+
+    editPost(data: any) {
+      console.log(data);
+    }
 }
