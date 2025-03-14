@@ -75,4 +75,7 @@ export class PostService {
       }
     }
 
+    createPost(data: any) {
+      console.log(data);
+    }
 }

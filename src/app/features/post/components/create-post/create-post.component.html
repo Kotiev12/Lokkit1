@@ -1,0 +1,43 @@
+<div class="create-post">
+  <h1>Create Post</h1>
+  <form [formGroup]="createPostForm" class="form" class="form">
+    <label class="file">
+      <input class="img" formControlName="image" type="file" />
+      <span>+</span>
+    </label>
+    <input formControlName="title" type="text" placeholder="Title" />
+    @if(createPostForm.controls.title.touched &&
+    createPostForm.controls.title.invalid){
+    <span *ngIf="createPostForm.controls.title?.errors?.['required']">
+      обязательное поле
+    </span>
+    <span *ngIf="createPostForm.controls.title?.errors?.['minlength']">
+      минимальное число символов 3
+    </span>
+    }
+    <input formControlName="content" type="text" placeholder="Content" />
+    @if(createPostForm.controls.content.touched &&
+    createPostForm.controls.content.invalid){
+    <span *ngIf="createPostForm.controls.content?.errors?.['required']">
+      Обязательное поле
+    </span>
+    <span *ngIf="createPostForm.controls.content?.errors?.['maxlength']">
+      максимальное число символов 150
+    </span>
+    }
+    <div formArrayName="tegs" class="tegs">
+      @for(teg of tegs.controls; track $index){
+      <label class="teg" for="">
+        <input [formControlName]="$index" type="text" name="" id="" />
+        <p (click)="closeTag()">x</p>
+      </label>
+      }
+    </div>
+    <div>
+      <div class="foot-btn">
+        <button class="tag" (click)="addTeg()">Добавить тег</button>
+        <button class="create" (click)="createPost()">Create Post</button>
+      </div>
+    </div>
+  </form>
+</div>
