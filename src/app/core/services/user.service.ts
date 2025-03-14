@@ -47,18 +47,14 @@ export class UserService {
     return this.users.find(user => user.id === id);
   };
 
-  updateUser(id: number, data: Partial<User>): User | undefined {
-    let updatedUser: User | undefined;
-
-    this.users = this.users.map(user => {
-      if (user.id === id) {
-        updatedUser = {...user, ...data};
-        return updatedUser;
-      }
-      return user;
-    });
-    return updatedUser;
-  };
+  updateUser(id: number, data: any): void {
+    const user = this.getUserById(id);
+    if (user) {
+      user.firstName = data.firstName;
+      user.lastName = data.lastName;
+      user.email = data.email;
+    }
+  }
 
 
 

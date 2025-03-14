@@ -3,32 +3,52 @@
   <button class="change-photo">Change photo</button>
   <button class="delete">Delete</button>
 </div>
-<div class="main">
+<form [formGroup]="editProfileForm" class="main">
   <div class="main-info">
     <h4>Info</h4>
     <div class="info-name">
       <div class="grey">
-        <input class="grey" type="text" placeholder="Last Name">
+        <input formControlName="firstName" class="grey" type="text" placeholder="First Name">
+          <span *ngIf="editProfileForm.controls.firstName?.errors?.['minlength']">
+            Минимум 3 символа
+          </span>
+          <span *ngIf="editProfileForm.controls.firstName?.errors?.['lettersOnly']">
+            Только буквы
+          </span>
       </div>
-      <input type="text" placeholder="FullName">
+      <input formControlName="lastName" type="text" placeholder="Last Name">
+      <span *ngIf="editProfileForm.controls.lastName?.errors?.['minlength']">
+        Минимум 3 символа
+      </span>
+      <span *ngIf="editProfileForm.controls.lastName?.errors?.['lettersOnly']">
+        Только буквы
+      </span>
     </div>
     <div class="greyy">
-      <input class="greyy" type="text" placeholder="City">
+      <input formControlName="email" class="greyy" type="text" placeholder="Email">
+      <span *ngIf="editProfileForm.controls.email?.errors?.['email']">
+        Введите корректную почту
+      </span>
     </div>
     <input type="text" placeholder="Story">
     <div class="Save">
-      <button>Save</button>
+      <button (click)="updateUser()">Save</button>
     </div>
   </div>
   <div class="main-password">
     <h4>Password</h4>
     <div class="info-password">
       <input type="text" placeholder="Old Password">
-      <input type="text" placeholder="Old Password">
-      <input type="text" placeholder="Old Password">
+      <input type="text" placeholder="New Password">
+      <input type="text" placeholder="Confirm New Password">
     </div>
     <div class="Save">
-      <button>Save</button>
+      <button (click)="updateUser()">Save</button>
     </div>
   </div>
+</form>
+<div class="user">
+  <p>{{this.userService.activeUser.firstName}}</p>
+  <p>{{this.userService.activeUser.lastName}}</p>
+  <p>{{this.userService.activeUser.email}}</p>
 </div>
