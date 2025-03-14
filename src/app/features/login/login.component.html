@@ -1,1 +1,58 @@
-<p>login works!</p>
+
+<form [formGroup]="loginForm" class="register">
+  <div class="logo">
+    <img src="../../../assets/icons/Frame 3.svg" alt="">
+  </div>
+  <div class="block">
+    <div class="input">
+      <img src="../../../assets/icons/Email.svg" alt="">
+      <input formControlName="email" minlength="3" type="text" placeholder="Email">
+      <div class="form-err" *ngIf="loginForm.controls.email?.touched && loginForm.controls.email?.invalid">
+        <span *ngIf="loginForm.controls.email?.errors?.['required']">
+          Обязательное поле
+        </span>
+        <span *ngIf="loginForm.controls.email?.errors?.['email']">
+          Введите Email
+        </span>
+      </div>
+    </div>
+    <div class="input">
+      <img src="../../../assets/icons/User-Circle-2.svg" alt="">
+      <input formControlName="username" type="text" placeholder="Username">
+      <div class="form-err" *ngIf="loginForm.controls.username?.touched && loginForm.controls.username?.invalid">
+        <span *ngIf="loginForm.controls.username?.errors?.['required']">
+          Обязательное поле
+        </span>
+        <span *ngIf="loginForm.controls.username?.errors?.['minlength']">
+          Минимум 3 символа
+        </span>
+      </div>
+    </div>
+    <div class="input">
+      <img src="../../../assets/icons/Unlock.svg" alt="">
+      <input formControlName="password" type="text" placeholder="Password">
+      <div class="form-err" *ngIf="loginForm.controls.password?.touched && loginForm.controls.password?.invalid">
+        <span *ngIf="loginForm.controls.password?.errors?.['minlength']">
+          Минимум 3 символа
+        </span>
+        <span *ngIf="loginForm.controls.password?.errors?.['required']">
+          Обязательное поле 
+        </span>
+      </div>
+    </div>
+    <div class="register-foot">
+      <button (click)="logIn()">Log in</button>
+      <div class="login">
+        <p>You dont have account?</p>
+        <span>Registration</span>
+      </div>
+    </div>
+    <div class="links-block">
+      <div class="links">
+          <img src="../../../assets/icons/Google Plus.png" alt="">
+          <img src="../../../assets/icons/VK.png" alt="">
+          <img src="../../../assets/icons/Youtube.png" alt="">
+      </div>
+    </div>
+  </div>
+</form>
