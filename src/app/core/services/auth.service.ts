@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   router = inject(Router)
-  isLoggedIn: boolean = false;
+  isLoggedIn: boolean = true;
   login(data: any){
     console.log(data);
     this.router.navigate(['feed'])

@@ -10,7 +10,7 @@ import { RegisterComponent } from './features/register/pages/register/register.c
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, ProfileComponent, SidebarComponent, ReactiveFormsModule, RegisterComponent ],
+  imports: [RouterOutlet, NavbarComponent, ProfileComponent, SidebarComponent, ReactiveFormsModule, RegisterComponent, CreatePostComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
