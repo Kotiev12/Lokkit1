@@ -3,12 +3,21 @@
   max-width: 1064px;
   gap: 30px;
   grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
 }
 
 .setting-accesses-buttons {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+h2{
+font-weight: 700;
+font-size: 24px;
+line-height: 22px;
+letter-spacing: -0.7%;
+
 }
 
 .accesses-buttons-container {
